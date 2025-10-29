@@ -31,7 +31,6 @@ India generates 1.6 lakh tonnes of waste daily, but only 30% is processed. Citiz
 See `/frontend`, `/backend`, `/dashboard`, `/docs`
 
 ## 📽️ Demo
-[Link to demo video] (to be added)
 
-## 📄 License
-MIT
+
+
