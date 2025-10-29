@@ -1,2 +1,2 @@
-mkdir admin-dashboard
-echo "# Admin Dashboard" > admin-dashboard/README.md
+mkdir assets
+echo "# Assets" > assets/README.md
