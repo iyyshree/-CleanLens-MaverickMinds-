@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Lens – Report Issue</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Clean Lens</h1>
+    <p class="subtitle">Report a waste issue</p>
+  </header>
+
+  <main>
+    <form id="reportForm" class="card">
+      <div class="grid">
+        <label>Photo
+          <input type="file" id="imageInput" accept="image/*;capture=camera" required />
+        </label>
+        <label>Description
+          <textarea id="description" rows="4" placeholder="Describe the issue..." required></textarea>
+        </label>
+        <label>Urgency
+          <select id="urgency">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+          </select>
+        </label>
+        <label>Ward (optional)
+          <input type="text" id="ward" placeholder="e.g., 42" />
+        </label>
+        <label>Address (optional)
+          <input type="text" id="address" placeholder="Nearest address or landmark" />
+        </label>
+        <label>User ID (optional)
+          <input type="text" id="userId" placeholder="user_123" />
+        </label>
+        <div class="coords">
+          <div><strong>Latitude:</strong> <span id="lat">—</span></div>
+          <div><strong>Longitude:</strong> <span id="lng">—</span></div>
+          <button type="button" id="locateBtn">Use my location</button>
+        </div>
+      </div>
+      <button class="submit" type="submit">Submit Report</button>
+      <p id="statusMsg" class="status"></p>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    // Optionally set API base at runtime:
+    // window.CLEAN_LENS_API_BASE = 'http://localhost:3000/api';
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clean Lens Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Clean Lens • Admin Dashboard</h1>
+    <div class="top-actions">
+      <input id="searchInput" type="search" placeholder="Search by text, ward, id..." />
+      <select id="statusFilter">
+        <option value="">All Statuses</option>
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Resolved</option>
+      </select>
+      <button id="refreshBtn">Refresh</button>
+      <div class="auth">
+        <input id="emailInput" type="email" placeholder="admin email" />
+        <input id="passwordInput" type="password" placeholder="password" />
+        <button id="signInBtn">Sign In</button>
+        <button id="signOutBtn" style="display:none">Sign Out</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" id="stats"></section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Urgency</th>
+            <th>Ward</th>
+            <th>Address</th>
+            <th>Created</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="reportsBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <dialog id="detailsModal">
+    <div class="modal-content">
+      <button class="close" id="closeModal">×</button>
+      <div class="modal-body">
+        <div class="left">
+          <img id="detailImage" alt="Report image" />
+          <p id="detailDescription"></p>
+          <div class="map-placeholder" id="map">
+            Map preview here (configure Google Maps API)
+          </div>
+        </div>
+        <div class="right">
+          <h3>Report Details</h3>
+          <div id="detailMeta" class="meta"></div>
+          <div class="status-actions">
+            <label>Update Status</label>
+            <div>
+              <button data-status="Pending" class="status-btn">Pending</button>
+              <button data-status="In Progress" class="status-btn">In Progress</button>
+              <button data-status="Resolved" class="status-btn">Resolved</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+  <script>
+    // Optional: Google Maps JS API can be loaded here once you have an API key
+    // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap" async defer></script>
+  </script>
+</body>
+<style>
+/* Quick inline safety styles if CSS fails to load */
+body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0}
+</style>
+</html>
+

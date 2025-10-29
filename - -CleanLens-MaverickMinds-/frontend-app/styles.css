@@ -1,0 +1,16 @@
+:root{ --bg:#0b132b; --panel:#1c2541; --muted:#3a506b; --accent:#5bc0be; --text:#eaeaea }
+*{ box-sizing:border-box }
+body{ background:var(--bg); color:var(--text); margin:0; font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif }
+.topbar{ padding:16px; background:var(--panel); border-bottom:1px solid rgba(255,255,255,.06) }
+.topbar h1{ margin:0; font-size:20px }
+.subtitle{ margin:4px 0 0; color:#9fb3c8; font-size:13px }
+main{ padding:16px }
+.card{ background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:10px; padding:16px; max-width:720px; margin:0 auto }
+.grid{ display:grid; grid-template-columns:1fr; gap:12px }
+label{ display:flex; flex-direction:column; gap:6px; font-size:14px }
+input[type="text"], textarea, select, input[type="file"]{ background:#0e1836; color:var(--text); border:1px solid var(--muted); border-radius:8px; padding:10px }
+.coords{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:6px }
+.coords button{ background:var(--accent); color:#062b2a; border:none; padding:8px 12px; border-radius:8px; cursor:pointer }
+.submit{ margin-top:12px; width:100%; background:var(--accent); color:#062b2a; border:none; padding:12px; border-radius:10px; cursor:pointer; font-weight:600 }
+.status{ margin-top:12px; min-height:20px; color:#9be8b8 }
+
